@@ -25,7 +25,7 @@ The project is deployable on platforms like **Render.com**, which supports persi
 ├── main.py               # Flask API with background scraper
 ├── scraper.py            # Web scraper logic
 ├── requirements.txt      # Python dependencies
-├── prev_result_scraper   # Was used to Scrape data and store to Mongodb
+├── prev_result_scraper   # Was used to Scrape data and store in Mongodb
 ```
 
 ---
@@ -96,10 +96,6 @@ GET /wimbledon?year=2002
 }
 ```
 
-### Error Responses
-
-* `400 Bad Request` – If the year is missing or not an integer.
-* `404 Not Found` – If no data is found for the provided year.
 
 ---
 
@@ -110,33 +106,6 @@ GET /wimbledon?year=2002
 * Updates the MongoDB Atlas database if new data is found.
 * Runs as a background thread within the Flask server.
 
----
-
-## Deployment on Render
-
-### Steps to Deploy
-
-1. Push the project to GitHub.
-2. Go to [https://dashboard.render.com/](https://dashboard.render.com/).
-3. Click "New Web Service" and connect your GitHub repository.
-4. Leave the build command blank or use `pip install -r requirements.txt` if prompted.
-5. Use the following start command:
-
-   ```bash
-   python main.py
-   ```
-6. Select the free plan.
-
-Render will deploy the Flask API and the background scraper will run continuously.
-
----
-
-## Future Improvements
-
-* Add environment variable support for MongoDB credentials.
-* Add CORS headers to support frontend integrations.
-* Add a health check endpoint.
-* Optionally, move to a task scheduler like APScheduler for better control.
 
 ---
 
