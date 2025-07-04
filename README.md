@@ -1,4 +1,3 @@
-
 # Wimbledon Finals API with Automated Scraper
 
 This project provides a Flask-based REST API to retrieve Wimbledon Men’s Singles final results by year from a MongoDB Atlas database. It includes an automated web scraper that runs every 24 hours in the background to check for the latest year’s final and update the database if new data is found.
