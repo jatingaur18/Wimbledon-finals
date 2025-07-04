@@ -4,4 +4,4 @@ pymongo
 requests
 beautifulsoup4
 load_dotenv
-flask pymongo
+flask
