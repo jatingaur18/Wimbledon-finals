@@ -41,8 +41,8 @@ def background_scraper():
 
 if __name__ == "__main__":
     # Start the background thread for scraping
-    scraper_thread = Thread(target=background_scraper, daemon=True)
-    scraper_thread.start()
+    # scraper_thread = Thread(target=background_scraper, daemon=True)
+    # scraper_thread.start()
 
     # Start Flask server
     app.run(host='0.0.0.0', port=5000, debug=True)
